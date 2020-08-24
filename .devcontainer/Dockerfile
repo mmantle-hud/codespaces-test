@@ -1,4 +1,5 @@
 FROM php:7.2-apache
+USER root
 RUN apt-get update && apt-get install -y git zlib1g-dev && docker-php-ext-install pdo pdo_mysql zip
 COPY ./src /var/www/html
 #COPY php.ini /usr/local/etc/php/php.ini
